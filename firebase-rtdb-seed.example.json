@@ -1,0 +1,54 @@
+{
+  "users": {
+    "REPLACE_WITH_SUPER_ADMIN_UID": {
+      "email": "admin@college.edu",
+      "name": "System Admin",
+      "role": "super_admin",
+      "department": "Administration",
+      "cabinNumber": "A-101",
+      "photoUrl": "",
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    "REPLACE_WITH_FACULTY_UID_1": {
+      "email": "faculty1@college.edu",
+      "name": "Dr. Priya Sharma",
+      "role": "faculty",
+      "department": "CSE",
+      "cabinNumber": "B-204",
+      "photoUrl": "",
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    "REPLACE_WITH_FACULTY_UID_2": {
+      "email": "faculty2@college.edu",
+      "name": "Prof. Arjun Mehta",
+      "role": "faculty",
+      "department": "ECE",
+      "cabinNumber": "C-118",
+      "photoUrl": "",
+      "createdAt": 0,
+      "updatedAt": 0
+    }
+  },
+  "facultyStatus": {
+    "REPLACE_WITH_FACULTY_UID_1": {
+      "facultyId": "REPLACE_WITH_FACULTY_UID_1",
+      "name": "Dr. Priya Sharma",
+      "department": "CSE",
+      "cabinNumber": "B-204",
+      "status": "Available",
+      "message": "In cabin for student queries",
+      "updatedAt": 0
+    },
+    "REPLACE_WITH_FACULTY_UID_2": {
+      "facultyId": "REPLACE_WITH_FACULTY_UID_2",
+      "name": "Prof. Arjun Mehta",
+      "department": "ECE",
+      "cabinNumber": "C-118",
+      "status": "Busy",
+      "message": "Class in progress",
+      "updatedAt": 0
+    }
+  }
+}
