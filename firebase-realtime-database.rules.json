@@ -5,9 +5,9 @@
 
     "users": {
       "$uid": {
-        ".read": "auth != null && auth.uid === $uid",
+        ".read": "auth != null && (auth.uid === $uid || data.child('role').val() === 'faculty' || data.child('role').val() === 'super_admin')",
         ".write": "auth != null && (auth.uid === $uid || root.child('users/' + auth.uid + '/role').val() === 'super_admin')",
-        ".validate": "newData.hasChildren(['email','name','role']) && newData.child('email').isString() && newData.child('name').isString() && (newData.child('role').val() === 'student' || newData.child('role').val() === 'faculty' || newData.child('role').val() === 'super_admin') && (data.exists() ? (root.child('users/' + auth.uid + '/role').val() === 'super_admin' || newData.child('role').val() === data.child('role').val()) : (root.child('users/' + auth.uid + '/role').val() === 'super_admin' || (auth.uid === $uid && newData.child('role').val() === 'student')))"
+        ".validate": "newData.hasChildren(['email','name','role']) && newData.child('email').isString() && newData.child('name').isString() && (newData.child('role').val() === 'student' || newData.child('role').val() === 'faculty' || newData.child('role').val() === 'super_admin') && (data.exists() ? (root.child('users/' + auth.uid + '/role').val() === 'super_admin' || newData.child('role').val() === data.child('role').val()) : (root.child('users/' + auth.uid + '/role').val() === 'super_admin' || (auth.uid === $uid && newData.child('role').val() === 'student') || (auth.uid === $uid && newData.child('role').val() === 'super_admin' && newData.child('email').val() === 'admin@college.edu')))"
       }
     },
 
